@@ -1,0 +1,137 @@
+.htm-css-cont {
+  display: flex;
+  justify-content: space-between;
+}
+.html-css-card {
+  text-align: center;
+}
+.htm-css-icon {
+  font-size: 40px;
+}
+.html-heading {
+  font-size: 15px;
+}
+
+.technology-cont {
+  display: flex;
+  flex-wrap: wrap;
+}
+.js-cont {
+  margin-right: 20px;
+  margin-bottom: 20px;
+}
+.js-icon {
+  font-size: 28px;
+}
+.js-heading {
+  font-size: 28px;
+}
+.ts-icon {
+  width: 28px;
+}
+.tools-cont {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  text-align: center;
+}
+.tools-card {
+  margin-right: 20px;
+  margin-bottom: 20px;
+}
+.tools-img {
+  width: 60px;
+}
+.soft-testing-cont h1,
+h2 {
+  color: rgb(236, 42, 42);
+}
+.view-btn {
+  text-align: center;
+}
+.testi-cont {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.testi-images {
+  width: 200px;
+  margin-bottom: 20px;
+  margin-right: 20px;
+}
+@media (min-width: 768px) {
+  .htm-css-cont {
+    display: flex;
+    justify-content: space-around;
+  }
+  .htm-css-icon {
+    font-size: 100px;
+  }
+  .html-heading {
+    font-size: 30px;
+  }
+  .java-heading {
+    font-size: 37px;
+  }
+  .js-heading {
+    font-size: 38px;
+  }
+  .js-cont {
+    margin-right: 40px;
+    width: 40%;
+  }
+  .ts-icon {
+    width: 40px;
+  }
+  .tools-img {
+    width: 80px;
+  }
+  .view-btn {
+    align-items: center;
+  }
+  .testi-cont {
+    justify-content: flex-start;
+  }
+}
+@media (min-width: 1024px) {
+  .js-cont {
+    width: 25%;
+  }
+}
+
+.home-card-cont {
+  position: relative;
+}
+.my-card {
+  position: absolute;
+  top: -300px;
+}
+
+.footer-my-list {
+  display: flex;
+  flex-direction: row;
+}
+.group-semi-head-cont{
+  /* background: linear-gradient(to right,gold,black); */
+  border-top-right-radius: 40px;
+  border-bottom-left-radius: 40px;
+}
+.group-content-cont{
+  order: 1;
+}
+.group-image-cont{
+  order: 0;
+}
+.group-seminar-card{
+  background-color: rgba(224, 216, 205, 0.164); 
+  padding: 40px;
+  box-shadow: 7px 7px 5px 0px rgba(161,146,146,0.43);
+}
+.group-card-img{
+  margin-bottom: 20px;
+}
+@media (min-width:768px) {
+  .group-card-img{
+    margin-bottom: 0;
+  }
+}
