@@ -20,7 +20,7 @@ Author URL: http://w3layouts.com
     <!-- Template CSS -->
     <link rel="stylesheet" href="assets/css/style-starter.css" />
     <style>
-      p{
+      p {
         text-align: justify !important;
       }
     </style>
@@ -71,10 +71,17 @@ Author URL: http://w3layouts.com
                 <a class="nav-link" href="courses.html">Courses</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="responsive-card-slider/index.html" target="_blank">Placements</a>
+                <a
+                  class="nav-link"
+                  href="responsive-card-slider/index.html"
+                  target="_blank"
+                  >Placements</a
+                >
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="awards-achievements.html">Achievements</a>
+                <a class="nav-link" href="awards-achievements.html"
+                  >Achievements</a
+                >
               </li>
               <li class="nav-item mr-lg-1">
                 <a class="nav-link" href="contact.html">Contact</a>
@@ -151,13 +158,78 @@ Author URL: http://w3layouts.com
               <h6 class="mt-md-4 mt-md-5 mt-4">
                 Build your library for your career <br />and personal growth
               </h6>
-              <br><br>
-              <a class="btn btn-warning" href="ARC PPT.pdf" target="_blank">DOWNLOAD BROUCHER</a>
-              <!-- <a
-                href="courses.html"
-                class="btn btn-style btn-primary mt-lg-5 mt-4"
-                >View Courses</a
-              > -->
+              <br /><br />
+              <!-- <a class="btn btn-warning" href="ARC PPT.pdf" target="_blank">DOWNLOAD BROUCHER</a> -->
+              <!-- modal  -->
+              <!-- Button trigger modal -->
+              <button
+                type="button"
+                class="btn btn-warning"
+                data-toggle="modal"
+                data-target="#exampleModal"
+              >
+                DOWNLOAD BROUCHER
+              </button>
+
+              <!-- Modal -->
+              <div
+                class="modal fade"
+                id="exampleModal"
+                tabindex="-1"
+                aria-labelledby="exampleModalLabel"
+                aria-hidden="true"
+              >
+                <div class="modal-dialog">
+                  <div class="modal-content">
+                    <div class="modal-header">
+                      <h5 class="modal-title" id="exampleModalLabel">
+                        Please Submit Your Details
+                      </h5>
+                      <button
+                        type="button"
+                        class="close"
+                        data-dismiss="modal"
+                        aria-label="Close"
+                      >
+                        <span aria-hidden="true">&times;</span>
+                      </button>
+                    </div>
+                    <div class="modal-body">
+                      <input
+                      id="name1"
+                        type="text"
+                        class="form-control"
+                        placeholder="Enter Your Name"
+                      />
+                      <br />
+                      <input
+                      id="phone1"
+                        type="text"
+                        class="form-control"
+                        placeholder="Enter Your Number"
+                      />
+                    </div>
+                    <div class="modal-footer">
+                      <button
+                        type="button"
+                        class="btn btn-secondary"
+                        data-dismiss="modal"
+                      >
+                        Close
+                      </button>
+                      <a
+                      onclick="gotowhatsapp()"
+                        target="_blank"
+                        href="ARC PPT.pdf"
+                        type="button"
+                        class="btn btn-primary"
+                        >Submit</a
+                      >
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!-- modal  -->
             </div>
             <div class="HomeAboutImages col-lg-6 mt-lg-0 mt-5 pl-lg-5">
               <div class="cwp23-text-cols row">
@@ -470,12 +542,14 @@ Author URL: http://w3layouts.com
                   </li>
                   <li class="mr-3">
                     <a href="responsive-card-slider/index.html"
-                      ><span class="fas fa-chevron-right mr-2"></span>Placements</a
+                      ><span class="fas fa-chevron-right mr-2"></span
+                      >Placements</a
                     >
                   </li>
                   <li class="mr-3">
                     <a href="awards-achievements.html"
-                      ><span class="fas fa-chevron-right mr-2"></span>Achievements</a
+                      ><span class="fas fa-chevron-right mr-2"></span
+                      >Achievements</a
                     >
                   </li>
                   <li class="mr-3">
@@ -488,17 +562,18 @@ Author URL: http://w3layouts.com
               <div class="columns-2">
                 <ul class="social">
                   <li>
-                    <a target="_blank" href="https://www.facebook.com/share/roNSuNRhEGyvDDLG/?mibextid=qi2Omg"
+                    <a
+                      target="_blank"
+                      href="https://www.facebook.com/share/roNSuNRhEGyvDDLG/?mibextid=qi2Omg"
                       ><span class="fab fa-facebook-f" aria-hidden="true"></span
                     ></a>
                   </li>
                   <li>
-                    <a target="_blank" href="https://www.instagram.com/arc.technologiesinstitution?igsh=MXAycGlwNHdxOGJ0ag=="
-                      >
-                      <span
-                        class="fab fa-instagram"
-                        aria-hidden="true"
-                      ></span>
+                    <a
+                      target="_blank"
+                      href="https://www.instagram.com/arc.technologiesinstitution?igsh=MXAycGlwNHdxOGJ0ag=="
+                    >
+                      <span class="fab fa-instagram" aria-hidden="true"></span>
                     </a>
                   </li>
                   <li>
@@ -575,7 +650,7 @@ Author URL: http://w3layouts.com
       <div class="copyright-footer text-center">
         <div class="container">
           <div class="columns">
-            <p>
+            <p style="text-align: center !important">
               © 2024 ARC. All rights reserved.Design by<a href="#">
                 ARC Technologies And Intitution</a
               >
@@ -656,6 +731,26 @@ Author URL: http://w3layouts.com
           }
         });
       });
+      function gotowhatsapp(e) {
+        event.preventDefault();
+        const name = document.getElementById("name1").value;
+        const phone = document.getElementById("phone1").value;
+
+        const url =
+          "https://wa.me/919209852494?text=" +
+          "Name: " +
+          name +
+          "%0a" +
+          "Phone: " +
+          phone;
+
+        if (name === "" || phone === "") {
+          errormsgEl.textContent = "Please fill all the details";
+          errormsgEl.style.color = "red";
+        } else {
+          window.open(url, "_blank").focus();
+        }
+      }
     </script>
     <!--//MENU-JS-->
     <script src="assets/js/bootstrap.min.js"></script>
