@@ -604,10 +604,10 @@ Author URL: http://w3layouts.com
           <div class="col-lg-6 bottom-info">
             <div class="project-header-section text-left">
               <h3 style="font-weight: 600;">Request A Call Back </h3>
-              <form class="mt-5" onsubmit="gotowhatsapp()">
+              <form class="mt-5" onsubmit="gotowhatsappOne()">
                 <label for="unumber">Mobile Number</label>
                 <input
-                class="form-control w-75"
+                class="form-control w-100"
                   id="unumber"
                   type="number"
                   name="number"
@@ -617,7 +617,7 @@ Author URL: http://w3layouts.com
                 <br>
                 <label for="uname">Full Name</label>
                 <input
-                class="form-control w-75"
+                class="form-control w-100"
                   id="uname"
                   type="text"
                   name="name"
@@ -627,7 +627,7 @@ Author URL: http://w3layouts.com
                 <br>
                 <label for="cName">Company Name</label>
                 <input
-                class="form-control w-75"
+                class="form-control w-100"
                   id="cName"
                   type="text"
                   name="cName"
@@ -637,7 +637,7 @@ Author URL: http://w3layouts.com
                 <br>
                 <label for="uEmail">Email</label>
                 <input
-                class="form-control w-75"
+                class="form-control w-100"
                   id="uEmail"
                   type="email"
                   name="number"
@@ -647,8 +647,8 @@ Author URL: http://w3layouts.com
                 <br>
                 <label for="uEmail">Your Designation</label>
                 <input
-                class="form-control w-75"
-                  id="uEmail"
+                class="form-control w-100"
+                  id="udesignation"
                   type="email"
                   name="number"
                   placeholder="e.g HR"
@@ -908,6 +908,31 @@ Author URL: http://w3layouts.com
           "%0a" +
           "Phone: " +
           phone;
+
+        window.open(url, "_blank").focus();
+      }
+      function gotowhatsappOne() {
+        const phone = document.getElementById("unumber").value;
+        const name = document.getElementById("uname").value;
+        const company = document.getElementById("cName").value;
+        const email = document.getElementById("uEmail").value;
+        const Designation = document.getElementById("udesignation").value;
+
+        const url =
+          "https://wa.me/918291541244?text=" +
+          "Name: " +
+          name +
+          "%0a" +
+          "Phone: " +
+          phone +
+          "Email: " +
+          email +
+          "%0a" +
+          "Company: " +
+          company +
+          "%0a" +
+          "Designation: " +
+          Designation;
 
         window.open(url, "_blank").focus();
       }
